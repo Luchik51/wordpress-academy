@@ -1,19 +1,19 @@
 replicaCount: 2
 
 image:
-  repository: agbusko/wordpress
+  repository: luchik/project2022
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.8"
+  tag: "v0.0.1"
 
 service:
   type: ClusterIP
   port: 80
 
 ingress:
-  hostname: wordpress.k8s-1.sa
+  hostname: wordpress.k8s-20.sa
 
 persistentVolumeClaim:
-  storageSize: 8Gi
+  storageSize: 2Gi
 
 env:
   - name: WORDPRESS_DB_HOST
