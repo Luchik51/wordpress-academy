@@ -61,10 +61,10 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: my-monitoring
+          SLACK_CHANNEL: project
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://avatars.githubusercontent.com/u/43742164?s=32&v=4
-          SLACK_MESSAGE: 'A new version of the project has been released'
+          SLACK_MESSAGE: 'A new version ${{ steps.tag_version.outputs.new_tag }} of the project has been released'
           SLACK_TITLE: 'Good job!'
           SLACK_USERNAME: agent
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
