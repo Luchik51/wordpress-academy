@@ -1,5 +1,5 @@
 ---
-- hosts: host02
+- hosts: host20
   vars:
     app_packages:
       - mariadb-server
