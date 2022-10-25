@@ -20,7 +20,7 @@ spec:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
         name: wordpress
         env:
-        {{- with  .Values.env }}
+        {{- with  .Values.extraEnvs }}
           {{- . | toYaml | nindent 10 -}}
         {{- end }}
         ports:
@@ -32,4 +32,4 @@ spec:
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
-          claimName: wordpress-pv-claim
+          claimName: wp-pv-claim

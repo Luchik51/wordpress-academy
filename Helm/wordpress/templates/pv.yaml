@@ -8,7 +8,7 @@ metadata:
     {{- include "wordpress.labels" . | nindent 4 }}
 spec:
   capacity:
-    storage: 8Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
