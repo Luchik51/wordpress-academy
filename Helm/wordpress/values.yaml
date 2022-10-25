@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: luchik/project2022
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v0.0.23"
+  tag: ""
 
 service:
   type: ClusterIP
