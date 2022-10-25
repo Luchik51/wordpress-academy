@@ -4,11 +4,14 @@ image:
   repository: luchik/project2022
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v0.0.19"
-  appversion: "6.0.3"
+#  appversion: "6.0.3"
 
 service:
   type: ClusterIP
   port: 80
+
+serviceMonitor:
+  namespace: "project-wordpress"
 
 ingress:
   hostname: wordpress.k8s-20.sa
