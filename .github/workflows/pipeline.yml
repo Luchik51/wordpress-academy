@@ -50,7 +50,7 @@ jobs:
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@master
         with:
-          charts_dir: ./Helm
+          charts_dir: Helm
           branch: main
           linting: off
           charts_url: https://luchik51.github.io/wordpress-academy/
