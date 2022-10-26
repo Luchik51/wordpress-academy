@@ -9,10 +9,10 @@ FROM php:8-apache
 #Version Wordpress and SHA1 for test
 ENV #WORDPRESS_VERSION=5.9.3 \
 #    WORDPRESS_VERSION_SHA1=cab576e112c45806c474b3cbe0d1263a2a879adf
-#    WORDPRESS_VERSION=6.0.1 \
-#    WORDPRESS_VERSION_SHA1=a1c02b6b754d74c08a70d5a8b604bdb72f1b276a
-    WORDPRESS_VERSION=6.0.3 \
-    WORDPRESS_VERSION_SHA1=9ab0d521aac7042cf09946f17ec86dc65b182201
+    WORDPRESS_VERSION=6.0.1 \
+    WORDPRESS_VERSION_SHA1=a1c02b6b754d74c08a70d5a8b604bdb72f1b276a
+#    WORDPRESS_VERSION=6.0.3 \
+#    WORDPRESS_VERSION_SHA1=9ab0d521aac7042cf09946f17ec86dc65b182201
 
 
 
@@ -132,16 +132,8 @@ RUN set -eux; \
 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
 
 RUN set -eux; \
-	#version='6.0.1'; \
-	#sha1='a1c02b6b754d74c08a70d5a8b604bdb72f1b276a'; \
-	#version='6.0'; \
-	#sha1='7a5a6d0591771e730b05c49d0c3fc134624d0491'; \
-	#version='5.9.4'; \
-	#sha1='4def36bb1b4a3c935cf9758f652cd719e97d97c9'; \
 	version=${WORDPRESS_VERSION}; \
 	sha1=${WORDPRESS_VERSION_SHA1}; \
-	#version='5.9.2'; \
-	#sha1='19653440effafce0f768a1ba5092710717835bdc'; \
 	\
 	curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; \
 	echo "$sha1 *wordpress.tar.gz" | sha1sum -c -; \
