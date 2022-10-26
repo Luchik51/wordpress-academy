@@ -1,4 +1,0 @@
-v0.0.31 - Wordpress 6.0.3 and PHP8
-v0.0.32 - Wordpress 6.0.1 and PHP8
-v0.0.33 - v0.0.36 - Not Work
-v0.0.37 - Wordpress 4.4.29 and PHP7.4 + RollingUpdate - change
