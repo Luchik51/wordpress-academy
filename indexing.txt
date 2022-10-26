@@ -1,2 +1,4 @@
 v0.0.31 - Wordpress 6.0.3 and PHP8
 v0.0.32 - Wordpress 6.0.1 and PHP8
+v0.0.33 - Wordpress 6.0.1 and PHP8 + RollingUpdate
+v0.0.34 - Wordpress 5.3.14 and PHP7.4 + RollingUpdate
