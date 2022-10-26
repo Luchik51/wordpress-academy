@@ -33,6 +33,11 @@ jobs:
           context: ./Docker
           push: true
           tags: luchik/project2022:${{ steps.tag_version.outputs.new_tag }}
+
+      - name: Update appVersion & Chart version
+      run: |
+          sed -i "s/^version:.*$/version: ${{ steps.tag_version.outputs.new_tag }}/" ./Helm/wordpress/Chart.yaml
+          sed -i "s/^appVersion:.*$/appVersion: ${{ steps.tag_version.outputs.new_tag }}/" ./Helm/wordpress/Chart.yaml
           
       - name: Helm tool
         uses: Azure/setup-helm@v3
