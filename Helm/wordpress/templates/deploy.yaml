@@ -9,11 +9,11 @@ spec:
   selector:
     matchLabels:
       {{- include "wordpress.selectorLabels" . | nindent 6 }}
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 25%
-      maxUnavailable: 25%
+      maxUnavailable: 0
   template:
     metadata:
       labels:
