@@ -9,8 +9,8 @@ spec:
   selector:
     matchLabels:
       {{- include "wordpress.selectorLabels" . | nindent 6 }}
-  replicas: 2
-  minReadySeconds: 60
+  replicas: 1
+#  minReadySeconds: 60
   strategy:
     rollingUpdate:
       maxSurge: 25%

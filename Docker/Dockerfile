@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM php:7.4-apache
+FROM php:7.0-apache
 
 #Version Wordpress and SHA1 for test
 ENV #WORDPRESS_VERSION=5.9.3 \
