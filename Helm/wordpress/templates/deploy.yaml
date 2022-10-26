@@ -12,8 +12,8 @@ spec:
   replicas: 2
   strategy:
     rollingUpdate:
-      maxSurge: 50%
-      maxUnavailable: 50%
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     metadata:
       labels:
@@ -31,7 +31,7 @@ spec:
           name: http
         volumeMounts:
         - name: wordpress-persistent-storage
-          mountPath: /var/www/html/
+          mountPath: /var/www/html/wp-content/
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
