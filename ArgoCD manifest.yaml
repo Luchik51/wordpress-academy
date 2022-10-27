@@ -1,0 +1,8 @@
+project: default
+source:
+  repoURL: 'https://luchik51.github.io/wordpress-academy/'
+  targetRevision: v0.0.44
+  chart: wordpress
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: ingress-wordpress
